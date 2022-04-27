@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <button id="dec">Decrement</button>
+    <button id="inc">Increment</button>
+    
+</body>
+</html>
+
+<script>
+    //var count=0;
+    //var count= localStorage.getItem("counterValue");
+    var count=localStorage.getItem("counterValue") || 0;
+    // if(localStorage.getItem("counterValue") == null){
+    //     count=0;
+    // } else {
+    //     count=localStorage.getItem("counterValue");
+    // }
+    document.querySelector("h1").innerText=count;
+
+    document.querySelector("#dec").addEventListener("click",decFun)
+
+    function decFun() {
+        count--;
+        document.querySelector("h1").innerText=count;
+        localStorage.setItem("counterValue",count);
+
+    }
+
+    document.querySelector("#inc").addEventListener("click",incFun)
+
+    function incFun() {
+        count++;
+        document.querySelector("h1").innerText=count;
+        localStorage.setItem("counterValue",count);   
+    }
+
+
+    // or and operator || &&
+
+    // output will be true when both conds are true
+
+    console.log(true && true);
+    console.log(true && false);
+    console.log(false && true);
+    console.log(false && false);
+
+    console.log("-----------------------------------");
+
+    // output will be true when one condn is true
+    console.log(true || true);
+    console.log(true || false);
+    console.log(false || true);
+    console.log(false || false);
+    console.log(false || 1);
+
+    console.log("------------------------------------");
+
+    console.log(true || true);
+    console.log(true || null);
+    console.log(null || true);
+    console.log(null || null);
+
+    console.log(localStorage.getItem("avsghjssfg" )|| true);
+
+
+
+    // null,"",undefined,NaN - false
+    var x =false;
+    if(x){
+        console.log("masai");
+    }
+    else{
+        console.log("masai school");
+    }
+
+</script>
